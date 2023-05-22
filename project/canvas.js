@@ -1,4 +1,3 @@
-import anime from '/animejs/lib/anime.es.js';
 
 var c = document.getElementById("c");
 var ctx = c.getContext("2d");
