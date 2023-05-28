@@ -1,0 +1,33 @@
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.logo{
+width:50px;
+height:50px;
+}
+
+.nav_list{
+display: flex;
+justify-content: space-around;
+width: 40%;
+}
+
+.nav_ticket{
+display: flex;
+justify-content: space-around;
+width: 40%;
+
+border-left: 3px solid #000;
+
+}
+
+#c{
+    display: block;
+    width: 100vw;
+    height: 100vh;
+}
