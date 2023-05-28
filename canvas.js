@@ -1,4 +1,4 @@
-import anime from '/animejs/lib/anime.es.js';
+import { Application } from '@splinetool/runtime';
 
 var c = document.getElementById("c");
 var ctx = c.getContext("2d");
@@ -9,7 +9,7 @@ var animations = [];
 var circles = [];
 
 var colorPicker = (function() {
-  var colors = ["#FF6138", "#FFBE53", "#2980B9", "#282741"];
+  var colors = ["#FF6138", "#FFBE53", "#2980B9", "#575587"];
   var index = 0;
   function next() {
     index = index++ < colors.length-1 ? index : 0;
@@ -208,3 +208,19 @@ function fauxClick(x, y) {
   fauxClick.pageY = y;
   document.dispatchEvent(fauxClick)
 }
+const canvas = document.getElementById('d');
+
+const app = new Application(canvas);
+app.load('https://prod.spline.design/K1GfqOtiHZjbqb2r/scene.splinecode');
+
+const audio=new Audio('./public/sound.wav');
+const ball = document.querySelector(".soccer");
+
+ball.addEventListener("click", () => {
+  audio.currentTime = 0;
+
+  for (let i = 0; i < 2; i++) {
+    audio.play();
+  }
+
+});
