@@ -1,115 +1,134 @@
-.nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 30px;
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
 }
 
-.logo{
-width:50px;
-height:50px;
+.logo {
+  width: 50px;
+  height: 50px;
 }
 
-.nav_list{
-display: flex;
-justify-content: space-around;
-width: 40%;
+.nav_list {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
 }
 
-.nav_ticket{
-display: flex;
-justify-content: space-around;
-width: 40%;
+.nav_ticket {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
 
-border-left: 3px solid #000;
-
+  border-left: 3px solid #000;
 }
 
-#c{
-    display: block;
-    width: 100vw;
-    height: 100vh;
+#c {
+  display: block;
+  width: 100vw;
+  height: 100vh;
 }
 
-.canvas_container{
-position: relative;
+.canvas_container {
+  position: relative;
 }
 
-.overlay{
-position: absolute;
-bottom: 150px;
-left:40%;
-display: flex;
-align-items: center;
-gap: 30px;
-
+.overlay {
+  position: absolute;
+  bottom: 150px;
+  left: 40%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
-.countdown_container{
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 10px;
-padding-right: 10px;
-border-right: 3px solid #000;
+.countdown_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-right: 10px;
+  border-right: 3px solid #000;
 }
 
-#d{
+#d {
   position: absolute;
   top: 0;
 }
-.flag{
-    position: absolute;
-    top:10%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
+.flag {
+  position: absolute;
+  top: 10%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
 }
 
-.teams{
-display: flex;
-align-items: center;
-gap: 30px;
+.teams {
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
 .soccer {
-    background: url('/public/ball.png');
-    background-size: 80px 80px;
-    height: 80px;
-    width: 80px;
-    position: relative;
-    -webkit-animation:roll 4s linear;
-    -moz-animation:roll 4s linear;
-    animation-delay: 2s !important;
-    animation:roll 4s linear;
-    cursor: pointer;
+  background: url("./public/ball.png");
+  background-size: 80px 80px;
+  height: 80px;
+  width: 80px;
+  position: relative;
+  -webkit-animation: roll 4s linear;
+  -moz-animation: roll 4s linear;
+  animation-delay: 2s !important;
+  animation: roll 4s linear;
+  cursor: pointer;
+}
 
-  }
+.soccer:active {
+  transform: translateY(-5px) !important;
+}
 
-  .soccer:active {
-  transform:translateY(-5px) !important; 
+@-moz-keyframes roll {
+  0% {
+    left: 0px;
+    -webkit-transform: rotate(-360deg);
   }
+  50% {
+    left: 1000;
+    -webkit-transform: rotate(360deg);
+  }
+  100% {
+    left: 0px;
+    -webkit-transform: rotate(-360deg);
+  }
+}
+@-webkit-keyframes roll {
+  0% {
+    left: 0px;
+    -webkit-transform: rotate(-360deg);
+  }
+  50% {
+    left: 1000;
+    -webkit-transform: rotate(360deg);
+  }
+  100% {
+    left: 0px;
+    -webkit-transform: rotate(-360deg);
+  }
+}
 
-  
-  @-moz-keyframes roll {  
-    0% {left:0px; -webkit-transform: rotate(-360deg);}
-    50% {left:1000; -webkit-transform: rotate(360deg);}
-    100% {left:0px; -webkit-transform: rotate(-360deg);}
+@keyframes roll {
+  0% {
+    left: 0px;
+    -webkit-transform: rotate(-360deg);
   }
-  @-webkit-keyframes roll { 
-    0% {left:0px; -webkit-transform: rotate(-360deg);}
-    50% {left:1000; -webkit-transform: rotate(360deg);}
-    100% {left:0px; -webkit-transform: rotate(-360deg);}
+  50% {
+    left: 1000px;
+    -webkit-transform: rotate(360deg);
   }
-  
-  @keyframes roll { 
-    0% {left:0px; -webkit-transform: rotate(-360deg);}
-    50% {left:1000px; -webkit-transform: rotate(360deg);}
-    100% {left:0px; -webkit-transform: rotate(-360deg);}
+  100% {
+    left: 0px;
+    -webkit-transform: rotate(-360deg);
   }
-
-  
-
- 
+}
