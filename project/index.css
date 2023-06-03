@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .nav {
   display: flex;
   flex-direction: row;
@@ -31,104 +36,236 @@
   height: 100vh;
 }
 
-.canvas_container {
-  position: relative;
-}
+/*------------------------WEB SECTION PART-------------------------*/
 
-.overlay {
-  position: absolute;
-  bottom: 150px;
-  left: 40%;
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-
-.countdown_container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+.section-1 {
+  padding-left: 10px;
   padding-right: 10px;
-  border-right: 3px solid #000;
+  background: linear-gradient(
+    90deg,
+    rgba(63, 94, 251, 1) 0%,
+    rgb(75, 54, 126) 100%
+  );
 }
 
-#d {
-  position: absolute;
-  top: 0;
+/*------------------------NAVBAR + LOGO-------------------------*/
+.section-1 .navbar-logo-champions-flex {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 20px;
 }
-.flag {
-  position: absolute;
-  top: 10%;
+
+/* .navbar-logo-champions-flex ul {
+  list-style-type: none;
+  display: flex;
+  padding: 30px;
+} */
+
+/* .navbar-logo-champions-flex li {
+  text-align: center;
+} */
+
+/* .navbar-logo-champions-flex a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.navbar-logo-champions-flex .li-a-underline {
+  text-decoration: underline;
+  color: aquamarine;
+}
+
+.navbar-logo-champions-flex a:hover {
+  color: grey;
+  text-decoration: none;
+}
+
+.navbar-logo-champions-flex a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: aquamarine;
+  transition: width 0.3s;
+}
+
+.navbar-logo-champions-flex a:hover::after {
+  width: 100%;
+} */
+
+.section-1 .logo-champions {
+  width: 100px;
+  height: 100px;
+  border: none;
+  margin-right: 20px;
+}
+
+/*---------------------VIDEO-------------------------*/
+
+.video-wrapper h2 {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.video-bar {
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/*------------------------COMPONENTS-----------------------*/
+.section-2-components {
+  background: linear-gradient(
+    90deg,
+    rgba(63, 94, 251, 1) 0%,
+    rgb(75, 54, 126) 100%
+  );
+}
+
+.flex-div {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  border-top: 1px solid black;
+}
+
+.comp-1 {
+  padding-bottom: 50px;
+  padding-top: 30px;
+  padding-right: 50px;
+  padding-left: 20px;
+}
+
+.comp-2 {
+  padding-bottom: 50px;
+  padding-top: 30px;
+  padding-left: 50px;
+  padding-right: 20px;
+}
+
+.section-2-components img {
   width: 100%;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-top: solid grey 0.5px;
+  border-left: solid grey 0.5px;
+  border-right: solid grey 0.5px;
 }
 
-.teams {
-  display: flex;
-  align-items: center;
-  gap: 30px;
+.section-2-components p {
+  width: 100%;
+  background-color: white;
+  border: solid 0.5px grey;
+  border-top: none;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  margin-top: -5px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  text-align: center;
 }
 
-.soccer {
-  background: url("./public/ball.png");
-  background-size: 80px 80px;
-  height: 80px;
-  width: 80px;
-  position: relative;
-  -webkit-animation: roll 4s linear;
-  -moz-animation: roll 4s linear;
-  animation-delay: 2s !important;
-  animation: roll 4s linear;
+.section-2-components button {
+  appearance: none;
+  background-color: white;
+  border: none;
+  outline: none;
   cursor: pointer;
+
+  margin-left: 450px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #212121;
+  font-size: 18px;
+  font-weight: 300;
+  text-decoration: underline;
+  transition: 0.4s;
+  position: relative; /*sets the positioning context for the button*/
+}
+.section-2-components button:after, /*define pseudo-elements for creating diagonal borders on the button.*/
+.section-2-components button:before {
+  content: ""; /*required for both after and before elements*/
+  position: absolute;
+  width: 0;
+  height: 0;
+  transition: all 0.4s, opacity 0.1s 0.4s;
+  opacity: 0;
 }
 
-.soccer:active {
-  transform: translateY(-5px) !important;
+.section-2-components button:after {
+  bottom: 0;
+  right: 0;
+  border-bottom: 2px solid #212121;
+  border-right: 2px solid #212121;
 }
 
-@-moz-keyframes roll {
-  0% {
-    left: 0px;
-    -webkit-transform: rotate(-360deg);
-  }
-  50% {
-    left: 1000;
-    -webkit-transform: rotate(360deg);
-  }
-  100% {
-    left: 0px;
-    -webkit-transform: rotate(-360deg);
-  }
-}
-@-webkit-keyframes roll {
-  0% {
-    left: 0px;
-    -webkit-transform: rotate(-360deg);
-  }
-  50% {
-    left: 1000;
-    -webkit-transform: rotate(360deg);
-  }
-  100% {
-    left: 0px;
-    -webkit-transform: rotate(-360deg);
-  }
+.section-2-components button:before {
+  top: 0;
+  left: 0;
+  border-left: 2px solid #212121;
+  border-top: 2px solid #212121;
 }
 
-@keyframes roll {
-  0% {
-    left: 0px;
-    -webkit-transform: rotate(-360deg);
-  }
-  50% {
-    left: 1000px;
-    -webkit-transform: rotate(360deg);
-  }
-  100% {
-    left: 0px;
-    -webkit-transform: rotate(-360deg);
-  }
+.section-2-components button:hover:after,
+.section-2-components button:hover:before {
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  transition: 0.4s, opacity 0.1s;
+  opacity: 1;
+}
+
+.section-2-components button:hover {
+  background-color: dodgerblue;
+  text-decoration: none;
+}
+
+.section-2-components button a {
+  color: black;
+  background-color: none;
+}
+
+.section-2-components button:after, /*define pseudo-elements for creating diagonal borders on the button.*/
+.section-2-components button:before {
+  content: ""; /*required for both after and before elements*/
+  position: absolute;
+  width: 0;
+  height: 0;
+  transition: all 0.4s, opacity 0.1s 0.4s;
+  opacity: 0;
+}
+
+.section-2-components button:after {
+  bottom: 0;
+  right: 0;
+  border-bottom: 2px solid #212121;
+  border-right: 2px solid #212121;
+}
+
+.section-2-components button:before {
+  top: 0;
+  left: 0;
+  border-left: 2px solid #212121;
+  border-top: 2px solid #212121;
+}
+
+.section-2-components button:hover:after,
+.section-2-components button:hover:before {
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  transition: 0.4s, opacity 0.1s;
+  opacity: 1;
+}
+
+.section-2-components button:hover {
+  background-color: dodgerblue;
+  text-decoration: none;
+}
+
+.section-2-components button a {
+  color: black;
+  background-color: none;
 }

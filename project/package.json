@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@splinetool/runtime": "^0.9.345",
     "animejs": "^3.2.1"
+  },
+  "devDependencies": {
+    "video.js": "^8.3.0"
   }
 }
