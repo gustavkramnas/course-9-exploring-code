@@ -113,11 +113,82 @@ body {
 }
 
 .video-bar {
-  padding-bottom: 15px;
+  padding-bottom: 100px;
   display: flex;
   justify-content: space-evenly;
 }
 
+/*------------------------SPONSORS-----------------------*/
+.h-spons-text {
+  text-align: center;
+  font-size: 5px;
+  padding-top: 10px;
+  border-top: 1px solid black;
+}
+
+.slider {
+  height: 180px;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  background: linear-gradient(
+    90deg,
+    rgba(63, 94, 251, 1) 0%,
+    rgb(75, 54, 126) 100%
+  );
+}
+
+.slide-track {
+  display: flex;
+  width: calc(200px * 16);
+  animation: scroll 59s linear infinite;
+}
+
+.slide-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-200px * 8));
+  }
+}
+
+.slide {
+  height: 150px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  padding: 1px;
+}
+
+.slide img {
+  width: 120px;
+  height: 80px;
+  transition: transform 1s;
+  border-bottom: 2px solid black;
+  padding-bottom: 10px;
+}
+
+.slide p {
+  text-align: center;
+  color: black;
+}
+
+.slide p:hover {
+  text-decoration: underline;
+  color: black;
+}
 /*------------------------COMPONENTS-----------------------*/
 .section-2-components {
   background: linear-gradient(
@@ -135,20 +206,21 @@ body {
 
 .comp-1 {
   padding-bottom: 50px;
-  padding-top: 30px;
+  padding-top: 100px;
   padding-right: 50px;
   padding-left: 20px;
 }
 
 .comp-2 {
   padding-bottom: 50px;
-  padding-top: 30px;
+  padding-top: 100px;
   padding-left: 50px;
   padding-right: 20px;
 }
 
 .section-2-components img {
   width: 100%;
+  height: 70%;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   border-top: solid grey 0.5px;
@@ -167,6 +239,7 @@ body {
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
   text-align: center;
+  font-style: italic;
 }
 
 .section-2-components button {
@@ -175,10 +248,10 @@ body {
   border: none;
   outline: none;
   cursor: pointer;
-
   margin-left: 450px;
   margin-top: 10px;
   margin-bottom: 10px;
+  margin-right: 9px;
   color: #212121;
   font-size: 18px;
   font-weight: 300;
@@ -186,46 +259,13 @@ body {
   transition: 0.4s;
   position: relative; /*sets the positioning context for the button*/
 }
-.section-2-components button:after, /*define pseudo-elements for creating diagonal borders on the button.*/
-.section-2-components button:before {
-  content: ""; /*required for both after and before elements*/
-  position: absolute;
-  width: 0;
-  height: 0;
-  transition: all 0.4s, opacity 0.1s 0.4s;
-  opacity: 0;
+
+.section-2-components .comp-1 button {
+  margin-right: 6px;
 }
 
-.section-2-components button:after {
-  bottom: 0;
-  right: 0;
-  border-bottom: 2px solid #212121;
-  border-right: 2px solid #212121;
-}
-
-.section-2-components button:before {
-  top: 0;
-  left: 0;
-  border-left: 2px solid #212121;
-  border-top: 2px solid #212121;
-}
-
-.section-2-components button:hover:after,
-.section-2-components button:hover:before {
-  width: calc(100% + 10px);
-  height: calc(100% + 10px);
-  transition: 0.4s, opacity 0.1s;
-  opacity: 1;
-}
-
-.section-2-components button:hover {
-  background-color: dodgerblue;
-  text-decoration: none;
-}
-
-.section-2-components button a {
-  color: black;
-  background-color: none;
+.section-2-components .comp-2 button {
+  padding-left: 40px;
 }
 
 .section-2-components button:after, /*define pseudo-elements for creating diagonal borders on the button.*/
@@ -269,3 +309,47 @@ body {
   color: black;
   background-color: none;
 }
+
+.section-2-components button:after, /*define pseudo-elements for creating diagonal borders on the button.*/
+.section-2-components button:before {
+  content: ""; /*required for both after and before elements*/
+  position: absolute;
+  width: 0;
+  height: 0;
+  transition: all 0.4s, opacity 0.1s 0.4s;
+  opacity: 0;
+}
+
+.section-2-components button:after {
+  bottom: 0;
+  right: 0;
+  border-bottom: 2px solid #212121;
+  border-right: 2px solid #212121;
+}
+
+.section-2-components button:before {
+  top: 0;
+  left: 0;
+  border-left: 2px solid #212121;
+  border-top: 2px solid #212121;
+}
+
+.section-2-components button:hover:after,
+.section-2-components button:hover:before {
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  transition: 0.4s, opacity 0.1s;
+  opacity: 1;
+}
+
+.section-2-components button:hover {
+  background-color: dodgerblue;
+  text-decoration: none;
+}
+
+.section-2-components button a {
+  color: black;
+  background-color: none;
+}
+
+/* ------------- FOOTER CONFETTI ---------------*/
