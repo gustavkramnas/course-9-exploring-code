@@ -118,6 +118,10 @@ body {
   justify-content: space-evenly;
 }
 
+.vjs-tech {
+  border: black solid 15px; /*border for videoplayer*/
+}
+
 /*------------------------SPONSORS-----------------------*/
 
 .background-spons {
