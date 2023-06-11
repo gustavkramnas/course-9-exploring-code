@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="home.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="content">
+      <div class="start-anim">
+        <h1 class="ml15">
+          <span class="word tlt">FINAL</span>
+          <span class="word tlt">CHAMPION</span>
+          <span class="word tlt">LEAGUES</span>
+        </h1>
+        <video class="background" autoplay loop muted>
+          <source src="/public/galaxy.mp4" type="video/mp4" />
+
+          <div class="star star-1" id="firststar"></div>
+        </video>
+        <div class="fof-wrapper">
+          <ul class="flags-wrapper">
+            <div class="col1">
+              <li class="wow slideInLeft">
+                <div class="flag-se"></div>
+              </li>
+              <li><p class="wow flipInY">VS.</p></li>
+              <li class="wow slideInRight">
+                <div class="flag-ire"></div>
+              </li>
+              <div id="fireplace"></div>
+            </div>
+            <div class="col2">
+              <h2 class="wow slideInUp subtitle">
+                MONDAY June 10, 21:00 Ataturk Olympic Stadium
+              </h2>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/animejs"></script>
+
+    <script src="./canvas.js" type="module"></script>
+    <script src="./countDown.js"></script>
+  </body>
+</html>

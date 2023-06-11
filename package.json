@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "@splinetool/runtime": "^0.9.345",
-    "animejs": "^3.2.1"
+    "animejs": "^3.2.1",
+    "slidein": "^1.0.1",
+    "velocity-animate": "^2.0.6"
   }
 }
