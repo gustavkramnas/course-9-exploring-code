@@ -63,14 +63,6 @@ body {
   animation: animatedBackground 10s linear infinite;
 }
 
-@keyframes animatedBackground {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: -300px 0;
-  }
-}
 @-moz-keyframes animatedBackground {
   0% {
     background-position: 0 0;
@@ -398,6 +390,10 @@ body {
   font-size: x-large;
 }
 
+.col2 h2 {
+  color: white;
+}
+
 .flags-wrapper li {
   display: inline-block;
   font-family: "Asap", Helvetica, Arial, sans-serif;
@@ -444,8 +440,8 @@ body {
 .flag-ire {
   background-image: url("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzU2YmY1NmY1Y2ZkZDUyZTA2NzBlMDE4Y2IxYTNkMWZjMmU4M2NiNCZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/cPkWqrrShRGqgwEMi5/giphy.gif");
 }
-.subtitle{
-color: #716d86;
+.subtitle {
+  color: #716d86;
 }
 .ml15 {
   font-weight: 800;
@@ -484,22 +480,14 @@ canvas {
   margin: 40px auto;
 }
 
-
-
-
-
-
-
-
-
 @keyframes fadeIn {
-  0%{
+  0% {
     opacity: 0;
   }
-  80%{
+  80% {
     opacity: 0.6;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }
