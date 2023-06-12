@@ -14,5 +14,8 @@
     "animejs": "^3.2.1",
     "slidein": "^1.0.1",
     "velocity-animate": "^2.0.6"
+  },
+  "devDependencies": {
+    "video.js": "^8.3.0"
   }
 }

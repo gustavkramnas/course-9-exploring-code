@@ -1,8 +1,9 @@
 $(document).ready(function() {
     // Load the content of each section
     $('#home').load('home.html');
-    $('#line-ups').load('page.html');
-    $('#info').load('info.html');
+    setTimeout(function() { $('#line-ups').load('page.html');},500)
+   
+    $('#info').load('section.html');
     $('#contact').load('contact.html');
   });
   

@@ -12,7 +12,7 @@ ball.addEventListener("click", () => {
 
 
 // STARS
-const star_count = 300;
+const star_count = 400;
 const stars = [];
 
 function initStarsAnimation() {
@@ -63,74 +63,74 @@ function animateStars() {
 
 initStarsAnimation();
 
-//FIRE
-var numOfFireElements = 8;
-var fireElementImages = [];
-var fireElements = [];
+// //FIRE
+// var numOfFireElements = 8;
+// var fireElementImages = [];
+// var fireElements = [];
 
-loadImages();
-initFireAnimation();
+// loadImages();
+// initFireAnimation();
 
-function loadImages() {
-  for (var i = 1; i < 8; i++) {
-    fireElementImages[i] = new Image();
-    fireElementImages[i].src = "./public/fire-animation/fire-" + i + ".png";
-    fireElementImages[i].id = i;
-    $(fireElementImages[i]).addClass("FireImage");
-    $(fireElementImages[i]).load(function () {
-      console.log("Image Load Complete: " + this.id);
-    });
-  }
-}
+// function loadImages() {
+//   for (var i = 1; i < 8; i++) {
+//     fireElementImages[i] = new Image();
+//     fireElementImages[i].src = "./public/fire-animation/fire-" + i + ".png";
+//     fireElementImages[i].id = i;
+//     $(fireElementImages[i]).addClass("FireImage");
+//     $(fireElementImages[i]).load(function () {
+//       console.log("Image Load Complete: " + this.id);
+//     });
+//   }
+// }
 
-function initFireAnimation() {
-  for (var i = 0; i < numOfFireElements; i++) {
-    fireElements[i] = document.createElement("div");
+// function initFireAnimation() {
+//   for (var i = 0; i < numOfFireElements; i++) {
+//     fireElements[i] = document.createElement("div");
 
-    for (var p = 0; p < fireElementImages.length; p++) {
-      $(fireElements[i]).append($(fireElementImages[p]).clone(true));
-    }
+//     for (var p = 0; p < fireElementImages.length; p++) {
+//       $(fireElements[i]).append($(fireElementImages[p]).clone(true));
+//     }
 
-    $(fireElements[i]).addClass("FireElement");
-    $(fireElements[i]).css({ left: i * 5 + "px" });
-    $("#fireplace").append(fireElements[i]);
+//     $(fireElements[i]).addClass("FireElement");
+//     $(fireElements[i]).css({ left: i * 5 + "px" });
+//     $("#fireplace").append(fireElements[i]);
 
-    loopFireElement(fireElements[i]);
-  }
-}
+//     loopFireElement(fireElements[i]);
+//   }
+// }
 
-function loopFireElement($element) {
-  var elementImages = $($element).children().toArray();
-  var randomVisibleElement = Math.floor(
-    Math.random() * fireElementImages.length
-  );
+// function loopFireElement($element) {
+//   var elementImages = $($element).children().toArray();
+//   var randomVisibleElement = Math.floor(
+//     Math.random() * fireElementImages.length
+//   );
 
-  for (var i = 0; i < elementImages.length; i++) {
-    if (i != randomVisibleElement) {
-      TweenMax.to(elementImages[i], 0, { autoAlpha: 0 });
-    } else {
-      TweenMax.to(elementImages[i], 0, { autoAlpha: 1 });
-    }
-  }
+//   for (var i = 0; i < elementImages.length; i++) {
+//     if (i != randomVisibleElement) {
+//       TweenMax.to(elementImages[i], 0, { autoAlpha: 0 });
+//     } else {
+//       TweenMax.to(elementImages[i], 0, { autoAlpha: 1 });
+//     }
+//   }
 
-  TweenMax.to($element, 0, { scaleX: 0, scaleY: 0, rotation: 0, autoAlpha: 1 });
+//   TweenMax.to($element, 0, { scaleX: 0, scaleY: 0, rotation: 0, autoAlpha: 1 });
 
-  var animationDuration = Math.random() * 0.4 + 0.4;
-  var animationDelay = Math.random() * 0.8;
+//   var animationDuration = Math.random() * 0.4 + 0.4;
+//   var animationDelay = Math.random() * 0.8;
 
-  TweenMax.to($element, animationDuration * 0.75, {
-    delay: animationDuration * 0.25 + animationDelay,
-    autoAlpha: 0,
-  });
+//   TweenMax.to($element, animationDuration * 0.75, {
+//     delay: animationDuration * 0.25 + animationDelay,
+//     autoAlpha: 0,
+//   });
 
-  TweenMax.to($element, animationDuration, {
-    scaleX: Math.random() * 0.1 + 0.4,
-    scaleY: Math.random() * 0.1 + 0.4,
-    delay: animationDelay,
-    onComplete: loopFireElement,
-    onCompleteParams: [$element],
-  });
-}
+//   TweenMax.to($element, animationDuration, {
+//     scaleX: Math.random() * 0.1 + 0.4,
+//     scaleY: Math.random() * 0.1 + 0.4,
+//     delay: animationDelay,
+//     onComplete: loopFireElement,
+//     onCompleteParams: [$element],
+//   });
+// }
 
 anime
   .timeline({ loop: false })
